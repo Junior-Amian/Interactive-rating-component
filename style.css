@@ -1,0 +1,148 @@
+:root{
+    --color-orange:hsl(25, 97%, 53%);
+    --color-white:hsl(0, 0%, 100%);
+    --color-light-grey:hsl(217, 12%, 63%);
+    --color-medium-gray: hsla(216, 12%, 54%, 0.084);
+    --color-dark-blue:hsl(213, 19%, 18%);
+    --color-darkest-blue:hsl(216, 12%, 8%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Overpass',sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: var(--color-darkest-blue)
+}
+
+.card{
+    height: 350px;
+    width: 380px;
+    padding: 30px 20px 30px 30px;
+    background-color:rgb(32 39 48);
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card-icon{
+    height: 50px;
+    width: 50px;
+    background-color: var(--color-medium-gray);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card-title{
+    margin-bottom: 15px;
+}
+
+.card-title h2{
+ color: var(--color-white);
+ font-size: 25px;
+}
+
+.card-info{
+  margin-bottom: 20px;
+}
+
+.card-info p{
+   color:var(--color-light-grey) ;
+}
+
+.card-rate{
+  margin-bottom: 15px;
+}
+
+.number{
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background-color: var(--color-medium-gray);
+    color: var(--color-light-grey);
+    border-radius: 50%;
+    position: relative;
+}
+
+.number:hover{
+    background-color: var(--color-light-grey);
+}
+
+.number:hover span{
+    color: var(--color-white);
+}
+
+.number:not(:last-of-type){
+    margin-right: 18px;
+}
+
+.number  span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+button{
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    text-transform: uppercase;
+    padding: 8px 135px;
+    border: none;
+    border-radius: 18px;
+    font-family: 'overpass';
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+button:hover{
+    color: var(--color-orange);
+    background-color: var(--color-white);
+}
+
+input{
+  opacity: 0;
+  visibility: hidden;
+}
+
+input:checked + label > .number{
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.card-2{
+    text-align: center;
+    padding: 30px 21px;
+    z-index: -1;
+}
+
+.card-2--icon{
+    margin-bottom: 20px;
+}
+
+.card-rating{
+    display: inline-block;
+    background-color : var(--color-medium-gray);
+    color: var(--color-orange);
+    padding: 8px 18px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
